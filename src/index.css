@@ -10,8 +10,12 @@
 }
 
 :root {
-	--root-el-bg-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
-	--root-el-bg-fallback: #c6ffdd;
+	--linear-gradient-green: #c6ffdd;
+	--linear-gradient-yellow: #fbd786;
+	--linear-gradient-red: #f7797d;
+
+	--root-el-bg-image: linear-gradient(to right, var(--linear-gradient-green), var(--linear-gradient-yellow), var(--linear-gradient-red));
+	--root-el-bg-fallback: var(--linear-gradient-green);
 }
 
 html {
