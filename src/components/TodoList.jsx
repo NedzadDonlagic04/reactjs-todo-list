@@ -1,8 +1,9 @@
 import TodoForm from "./TodoForm";
+import TodoItems from "./TodoItems";
 import { useState } from "react";
 
 function TodoList() {
-	const [todos, todosSetter] = useState('');
+	const [todos, todosSetter] = useState([]);
 
 	const submitHandler = todo => {
 		const newTodos = [todo, ...todos];
@@ -17,6 +18,7 @@ function TodoList() {
 				<h1>What's on today's agenda?</h1>
 			</header>
 			<TodoForm onSubmit={submitHandler}/>
+			<TodoItems todos={todos}/>
 		</div>
 	);
 }
