@@ -1,0 +1,6 @@
+.todo-list-container {
+	border: 3px solid white;
+	border-radius: 1rem;
+	background-color: hsla(0, 100%, 100%, .7);
+	padding: 1rem 3rem;
+}
