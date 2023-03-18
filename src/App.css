@@ -43,7 +43,15 @@
 }
 
 .todo-form-input:focus-visible {
+	outline: 3px solid var(--linear-gradient-green);
+}
+
+.todo-form-input.red:focus-visible {
 	outline: 3px solid var(--linear-gradient-red);
+}
+
+.todo-form-input.yellow:focus-visible {
+	outline: 3px solid var(--linear-gradient-yellow);
 }
 
 .todo-form-button {
@@ -54,12 +62,30 @@
 	font-size: 1.1rem;
 	font-weight: bolder;
 	text-transform: uppercase;
-	
-	background-color: var(--linear-gradient-red);
+
+	background-color: var(--linear-gradient-green);
+	color: black;
 }
 
 .todo-form-button:hover {
+	outline: 3px solid var(--linear-gradient-green);
+}
+
+.todo-form-button.red {
+	background-color: var(--linear-gradient-red);
+	color: white;
+}
+
+.todo-form-button.yellow {
+	background-color: var(--linear-gradient-yellow);
+}
+
+.todo-form-button.red:hover {
 	outline: 3px solid var(--linear-gradient-red);
+}
+
+.todo-form-button.yellow:hover {
+	outline: 3px solid var(--linear-gradient-yellow);
 }
 
 @media only screen and (max-width: 700px) {
