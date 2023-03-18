@@ -1,7 +1,10 @@
 import { useState } from "react";
 
 function TodoForm(props) {
-	const [value, valueSetter] = useState('');
+	const colorClasses = ['', 'yellow', 'red'];
+
+	const [value, valueSetter] = useState(''),
+	      [colorIndex, colorIndexSetter] = useState(0);
 
 	const changeHandler = e => valueSetter(e.target.value);
 
@@ -16,6 +19,9 @@ function TodoForm(props) {
 		};
 
 		props.onSubmit(todo);
+
+		colorIndexSetter( val => (val + 1 === colorClasses.length)? 0 : val + 1);
+		valueSetter('');
 	}
 
 	return (
@@ -27,10 +33,10 @@ function TodoForm(props) {
 				type="text" 	
 				value={value}
 				placeholder="Todo goes here"
-				className="todo-form-input"
+				className={"todo-form-input " + colorClasses[colorIndex]}
 				onChange={changeHandler}
 			/>
-			<button className="todo-form-button">Add</button>
+			<button className={"todo-form-button " + colorClasses[colorIndex]}>Add</button>
 		</form>
 	);
 }
