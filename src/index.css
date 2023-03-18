@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+:root {
+	--root-el-bg-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+	--root-el-bg-fallback: #c6ffdd;
+}
+
+html {
+	font-size: 16px;
+}
+
+#root {
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ 
+	background-color: var(--root-el-bg-fallback);
+	background-image: var(--root-el-bg-image);
+}
