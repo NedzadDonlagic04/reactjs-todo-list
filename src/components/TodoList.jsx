@@ -12,13 +12,22 @@ function TodoList() {
 		console.log(newTodos);
 	}
 
+	const clickHandler = id => {
+		const index = todos.findIndex(todo => todo.id === id);
+
+		const newList = [...todos];
+		newList.splice(index, 1);
+
+		todosSetter(newList);
+	}
+
 	return (
 		<div className="todo-list-container">
 			<header>
 				<h1>What's on today's agenda?</h1>
 			</header>
 			<TodoForm onSubmit={submitHandler}/>
-			<TodoItems todos={todos}/>
+			<TodoItems todos={todos} onClick={clickHandler}/>
 		</div>
 	);
 }
