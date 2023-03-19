@@ -14,6 +14,10 @@
 	--linear-gradient-yellow: #fbd786;
 	--linear-gradient-red: #f7797d;
 
+	--linear-gradient-green-w-opacity: #c6ffddc2;
+	--linear-gradient-yellow-w-opacity: #fbd786c2;
+	--linear-gradient-red-w-opacity: #f7797dc2;
+
 	--root-el-bg-image: linear-gradient(to right, var(--linear-gradient-green), var(--linear-gradient-yellow), var(--linear-gradient-red));
 	--root-el-bg-fallback: var(--linear-gradient-green);
 }
