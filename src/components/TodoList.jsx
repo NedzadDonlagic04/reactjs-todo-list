@@ -9,7 +9,6 @@ function TodoList() {
 		const newTodos = [todo, ...todos];
 
 		todosSetter(newTodos);
-		console.log(newTodos);
 	}
 
 	const clickHandler = id => {
