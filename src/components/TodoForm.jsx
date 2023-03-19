@@ -15,7 +15,8 @@ function TodoForm(props) {
 
 		const todo = {
 			id: crypto.randomUUID(),
-			text: value.trim().replace(/\s\s+/g, ' ')
+			text: value.trim().replace(/\s\s+/g, ' '),
+			addedClass: colorClasses[colorIndex]
 		};
 
 		props.onSubmit(todo);
